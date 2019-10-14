@@ -29,14 +29,96 @@ class MyAppState extends State<MyApp>{
       return MaterialApp(
 
           home : Scaffold(
+            
             appBar: AppBar(
+              
+              title: Text("Farmers and Chefs"),
               backgroundColor: Colors.redAccent,
-              title: Text('Farmers and Chefs'),
+              actions: <Widget>[
+
+               Container(
+                 margin: EdgeInsets.only(right: 30),
+                 child: Icon(FontAwesomeIcons.bell, color:Colors.white),
+
+               )   
+              ],
             ),
+            drawer: Drawer(
+              child: ListView(
+                children: <Widget>[
+
+                  UserAccountsDrawerHeader(
+                     decoration: BoxDecoration( color: Colors.redAccent, ),                 
+                    accountName: Text("Mohamad Hussein"),
+                   accountEmail: Text("mohamadhussein433@gmail.com"),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundColor: Colors.white,
+                
+             child: Text( "M",
+                style: TextStyle(fontSize: 40.0, color: Colors.redAccent),
+                             ),
+                           ),
+                          ),
+                          
+                          ListTile(
+                            title: Text('Catergories'),
+                            
+                          ),
+
+                           ListTile(
+                                 leading: CircleAvatar(
+                                    backgroundImage: AssetImage('asset/images/fruits.jpg'),
+                                 ),
+                                  title: Text('Fruits'),
+                                  subtitle: Text('Mangoes , Apples , Pinapples etc'), //           <-- subtitle
+                               ),
+
+                         
+                        
+                           ListTile(
+                                 leading: CircleAvatar(
+                                    backgroundImage: AssetImage('asset/images/vegetables.jpg'),
+                                 ),
+                                  title: Text('Vegetables'),
+                                  subtitle: Text('Carrots , Tomatoes , Onions etc'), //           <-- subtitle
+                               ),
+
+
+                            ListTile(
+                                 leading: CircleAvatar(
+                                    backgroundImage: AssetImage('asset/images/nuts.jpg'),
+                                 ),
+                                  title: Text('Nuts'),
+                                  subtitle: Text('Cashew  , Almond , Pea nuts etc'), //           <-- subtitle
+                               ),
+
+                           ListTile(
+                                 leading: CircleAvatar(
+                                    backgroundImage: AssetImage('asset/images/legumes.gif'),
+                                 ),
+                                  title: Text('Legumes'),
+                                  subtitle: Text('Beans  , Peas , Soybean  etc'), //           <-- subtitle
+                               ),
+              
+              
+                ],
+              ),
+            ),
+
+
+
+
+
+
+
+
+                  //Bottom navigation bar
+
 
             body: callPage(_currentIndex),
 
             bottomNavigationBar: BottomNavigationBar(
+              
             
                  type: BottomNavigationBarType.shifting ,
               currentIndex: _currentIndex,

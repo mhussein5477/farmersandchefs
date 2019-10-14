@@ -8,23 +8,38 @@ class Home extends StatelessWidget{
       return Container( 
 
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+               mainAxisSize: MainAxisSize.max,
+               mainAxisAlignment: MainAxisAlignment.end,
              
             children: <Widget>[
-             Row(
-               children: <Widget>[
-                 RaisedButton(
-                   color: Colors.redAccent,
-                    padding: EdgeInsets.only(top: 40.0 , bottom: 40.0, left: 10.0,right: 10.0),
-                     shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(140.0)),
-                    onPressed: (){},
-                   child : Icon(FontAwesomeIcons.plus, color: Colors.white,),  
-                  
-                 ),
-               ],
-             ),
+            
+            Container(
+              margin: EdgeInsets.only(bottom: 5),
+              
+              child: Center(
+                
+                  child:  GestureDetector(
+                         onTap: () {},
+                      child: ClipOval(
+                      child: Container(
+                      color: Colors.redAccent,
+                      height: 52.0, // height of the button
+                       width: 52.0, // width of the button
+                     child: Icon( FontAwesomeIcons.plus, color: Colors.white,),
+          ),
+        ),
+      ),
+              ), 
+          
+            )  
+            
+              
+             
             
 
-          ],),
+          ],
+          ),
 
       );
   }

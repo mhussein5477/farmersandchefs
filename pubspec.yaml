@@ -52,6 +52,12 @@ flutter:
    - asset/images/logo1.png
    - asset/images/logo2.png
    - asset/images/overlay.jpg
+   - asset/images/profile.png
+   - asset/images/fruits.jpg
+   - asset/images/vegetables.jpg
+   - asset/images/nuts.jpg
+   - asset/images/legumes.gif
+   
 
 
 
