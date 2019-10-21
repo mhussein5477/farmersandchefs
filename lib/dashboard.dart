@@ -30,19 +30,7 @@ class MyAppState extends State<MyApp>{
 
           home : Scaffold(
             
-            appBar: AppBar(
-              
-              title: Text("Farmers and Chefs"),
-              backgroundColor: Colors.redAccent,
-              actions: <Widget>[
-
-               Container(
-                 margin: EdgeInsets.only(right: 30),
-                 child: Icon(FontAwesomeIcons.bell, color:Colors.white),
-
-               )   
-              ],
-            ),
+            
             drawer: Drawer(
               child: ListView(
                 children: <Widget>[
@@ -152,8 +140,10 @@ class MyAppState extends State<MyApp>{
                 unselectedItemColor: Colors.grey,
             ),
 
+      
           ),
 
+      
         );
 
 

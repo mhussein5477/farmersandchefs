@@ -10,6 +10,7 @@ import './pagetransition.dart';
     Widget build(BuildContext context){
       
       return Scaffold(
+         resizeToAvoidBottomPadding: false,
          body:DecoratedBox(
               position: DecorationPosition.background,
               decoration: BoxDecoration(  
